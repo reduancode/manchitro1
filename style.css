@@ -1,0 +1,99 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Poppins, sans-serif;
+}
+
+/* NAVBAR */
+.navbar {
+  width: 100%;
+  background: linear-gradient(120deg, #4158d0, #c850c0);
+  padding: 15px 40px;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.navbar a:hover {
+  opacity: 0.7;
+}
+
+/* SECTION */
+.cards-section {
+  padding: 60px 40px;
+  background: #f4f6fb;
+  min-height: 100vh;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 32px;
+}
+
+/* CARDS */
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+}
+
+.card {
+  background: #fff;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  padding-bottom: 10px;
+  transform: translateY(20px);
+  animation: fadeUp 0.7s ease forwards;
+}
+
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.card h3 {
+  margin: 12px;
+}
+
+.card p {
+  margin: 0 12px 12px;
+  color: #666;
+}
+
+/* Hover animation */
+.card:hover {
+  transform: translateY(-5px) scale(1.02);
+  transition: 0.4s;
+}
+
+/* Entrance animation */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
